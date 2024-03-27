@@ -1,11 +1,18 @@
-import "./App.css";
+// import "./App.css";
+// import Book from "./pages/Book";
+// // import Navbar from "./components/Navbar";
+// import Home from "./pages/Home";
+// import ListedBooks from "./pages/ListedBooks";
 
-function App() {
-  return (
-    <>
-      <h1 className="text-8xl">Vite + React</h1>
-    </>
-  );
-}
+// function App() {
+//   return (
+//     <>
+//       {/* <Navbar></Navbar> */}
+//       <Home></Home>
+//       <Book></Book>
+//       <ListedBooks></ListedBooks>
+//     </>
+//   );
+// }
 
-export default App;
+// export default App;

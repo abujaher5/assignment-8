@@ -1,0 +1,80 @@
+[
+  {
+    "book_id": 1,
+    "book_name": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "image": "https://example.com/to-kill-a-mockingbird.jpg",
+    "review": "A classic novel that explores themes of racial injustice and moral growth.",
+    "total_pages": 336,
+    "rating": 4.5,
+    "category": "Fiction",
+    "tags": ["classic", "literary", "racial injustice"],
+    "publisher": "HarperCollins",
+    "year_of_publishing": 1960
+  },
+  {
+    "book_id": 2,
+    "book_name": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "image": "https://example.com/the-great-gatsby.jpg",
+    "review": "A brilliant portrayal of the Jazz Age and the American Dream.",
+    "total_pages": 180,
+    "rating": 4.2,
+    "category": "Fiction",
+    "tags": ["classic", "american literature", "jazz age"],
+    "publisher": "Charles Scribner's Sons",
+    "year_of_publishing": 1925
+  },
+  {
+    "book_id": 3,
+    "book_name": "1984",
+    "author": "George Orwell",
+    "image": "https://example.com/1984.jpg",
+    "review": "A dystopian masterpiece that warns of the dangers of totalitarianism.",
+    "total_pages": 328,
+    "rating": 4.7,
+    "category": "Fiction",
+    "tags": ["dystopian", "political fiction", "surveillance"],
+    "publisher": "Secker & Warburg",
+    "year_of_publishing": 1949
+  },
+  {
+    "book_id": 4,
+    "book_name": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "image": "https://example.com/the-catcher-in-the-rye.jpg",
+    "review": "A coming-of-age novel that resonates with adolescents and adults alike.",
+    "total_pages": 224,
+    "rating": 4.3,
+    "category": "Fiction",
+    "tags": ["coming-of-age", "adolescence", "alienation"],
+    "publisher": "Little, Brown and Company",
+    "year_of_publishing": 1951
+  },
+  {
+    "book_id": 5,
+    "book_name": "Harry Potter and the Philosopher's Stone",
+    "author": "J.K. Rowling",
+    "image": "https://example.com/harry-potter-and-the-philosophers-stone.jpg",
+    "review": "A magical tale of a young wizard's journey into the world of Hogwarts.",
+    "total_pages": 309,
+    "rating": 4.8,
+    "category": "Fantasy",
+    "tags": ["magic", "wizardry", "young adult"],
+    "publisher": "Bloomsbury",
+    "year_of_publishing": 1997
+  },
+  {
+    "book_id": 6,
+    "book_name": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "image": "https://example.com/the-hobbit.jpg",
+    "review": "An enchanting adventure set in Middle-earth, perfect for readers of all ages.",
+    "total_pages": 310,
+    "rating": 4.6,
+    "category": "Fantasy",
+    "tags": ["adventure", "middle-earth", "epic fantasy"],
+    "publisher": "Allen & Unwin",
+    "year_of_publishing": 1937
+  }
+]
