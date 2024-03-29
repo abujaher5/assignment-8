@@ -1,28 +1,36 @@
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { CiLocationOn, CiMemoPad } from "react-icons/ci";
+// import { CiLocationOn, CiMemoPad } from "react-icons/ci";
 
-import { IoPeopleOutline } from "react-icons/io5";
-import { useLoaderData, useParams } from "react-router-dom";
+// import { IoPeopleOutline } from "react-icons/io5";
+import { useLoaderData } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { getStoredReadBook } from "../utility/localStorage";
+import SelectedBooks from "../components/SelectedBooks";
 
 const ListedBooks = () => {
-  // const book = useLoaderData();
-
-  // let { book_id } = useParams();
-
-  // const [bookInfo, setBookInfo] = useState("");
-
-  // useEffect(() => {
-  //   const findOutBook = book?.find(
-  //     (selectBookDetails) => selectBookDetails.book_id == book_id
-  //   );
-
-  //   console.log(findOutBook);
-  //   setBookInfo(findOutBook);
-  // }, [book_id, book]);
+  const books = useLoaderData();
+  const [selectBooks, setSelectBooks] = useState([]);
+  useEffect(() => {
+    const storedBookIds = getStoredReadBook();
+    if (books.length > 0) {
+      const booksSelected = [];
+      for (const book_id of storedBookIds) {
+        const book = books.find((book) => book.book_id === book_id);
+        if (book) {
+          booksSelected.push(book);
+        }
+      }
+      // const booksSelected = books.filter((book) =>
+      //   storedBookIds.includes(book.book_id)
+      // );
+      setSelectBooks(booksSelected);
+      // console.log(books, storedBookIds, booksSelected);
+    }
+  }, []);
 
   return (
     <div>
+      <h3 className="text-center text-4xl">books:{selectBooks.length}</h3>
       <div className="text-center bg-[#1313130D] rounded-2xl h-24 mt-6 flex flex-col justify-center items-center font-bold text-2xl">
         {/* <h3>{bookInfo.book_name}</h3> */}
       </div>
@@ -34,6 +42,23 @@ const ListedBooks = () => {
       </div>
 
       <div className="mt-10">
+        <div className="flex  flax-start     ">
+          <a
+            rel="noopener noreferrer"
+            href="#"
+            className="flex items-center flex-shrink-0 px-5 py-3 space-x-2 border-b border-black "
+          >
+            <span>Read Books</span>
+          </a>
+          <a
+            rel="noopener noreferrer"
+            href="#"
+            className="flex items-center flex-shrink-0 px-5 py-3 space-x-2 border border-b-0 rounded-t-lg border-black "
+          >
+            <span>Wishlist Books</span>
+          </a>
+        </div>
+        {/* 
         <div className="flex  flax-start     ">
           <a
             rel="noopener noreferrer"
@@ -103,7 +128,11 @@ const ListedBooks = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
+
+        {selectBooks.map((book) => (
+          <SelectedBooks key={book.book_id} book={book}></SelectedBooks>
+        ))}
       </div>
     </div>
   );

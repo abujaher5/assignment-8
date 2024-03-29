@@ -1,62 +1,68 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
-import Chart from "../components/Chart";
-import { NavLink } from "react-router-dom";
+// import Chart from "../components/Chart";
+import { NavLink, useLoaderData } from "react-router-dom";
 
 const Book = () => {
-  const [chart, setChart] = useState([]);
-  useEffect(() => {
-    fetch("books.json")
-      .then((res) => res.json())
-      .then((data) => setChart(data));
-  }, []);
-  console.log(chart);
+  const books = useLoaderData();
+  console.log(books);
+  const { book_name, total_pages } = books;
+
+  // const [chart, setChart] = useState([]);
+  // useEffect(() => {
+  //   fetch("books.json")
+  //     .then((res) => res.json())
+  //     .then((data) => setChart(data));
+  // }, []);
+  // console.log(chart);
+  const data = { book_name };
+  console.log(data);
 
   const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
-  const data = [
-    {
-      name: "Page A",
-      uv: 4000,
-      pv: 2400,
-      amt: 2400,
-    },
-    {
-      name: "Page B",
-      uv: 3000,
-      pv: 1398,
-      amt: 2210,
-    },
-    {
-      name: "Page C",
-      uv: 2000,
-      pv: 9800,
-      amt: 2290,
-    },
-    {
-      name: "Page D",
-      uv: 2780,
-      pv: 3908,
-      amt: 2000,
-    },
-    {
-      name: "Page E",
-      uv: 1890,
-      pv: 4800,
-      amt: 2181,
-    },
-    {
-      name: "Page F",
-      uv: 2390,
-      pv: 3800,
-      amt: 2500,
-    },
-    {
-      name: "Page G",
-      uv: 3490,
-      pv: 4300,
-      amt: 2100,
-    },
-  ];
+  // const data = [
+  //   {
+  //     name: "Page A",
+  //     uv: 4000,
+  //     pv: 2400,
+  //     amt: 2400,
+  //   },
+  //   {
+  //     name: "Page B",
+  //     uv: 3000,
+  //     pv: 1398,
+  //     amt: 2210,
+  //   },
+  //   {
+  //     name: "Page C",
+  //     uv: 2000,
+  //     pv: 9800,
+  //     amt: 2290,
+  //   },
+  //   {
+  //     name: "Page D",
+  //     uv: 2780,
+  //     pv: 3908,
+  //     amt: 2000,
+  //   },
+  //   {
+  //     name: "Page E",
+  //     uv: 1890,
+  //     pv: 4800,
+  //     amt: 2181,
+  //   },
+  //   {
+  //     name: "Page F",
+  //     uv: 2390,
+  //     pv: 3800,
+  //     amt: 2500,
+  //   },
+  //   {
+  //     name: "Page G",
+  //     uv: 3490,
+  //     pv: 4300,
+  //     amt: 2100,
+  //   },
+  // ];
   const getPath = (x, y, width, height) => {
     return `M${x},${y + height}C${x + width / 3},${y + height} ${
       x + width / 2
@@ -95,12 +101,12 @@ const Book = () => {
           shape={<TriangleBar />}
           label={{ position: "top" }}
         >
-          {data.map((entry, index) => (
+          {/* {data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={colors[index % 20]} />
-          ))}
-          {chart.map((char) => (
+          ))} */}
+          {/* {chart.map((char) => (
             <Chart key={char.book_id} char={char}></Chart>
-          ))}
+          ))} */}
         </Bar>
       </BarChart>
 

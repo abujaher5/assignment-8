@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="navbar shadow-lg flex container rounded-md justify-between fixed z-10  bg-[#FFFFFF] px-4 sm:px-8 ">
+    <div className="navbar shadow-lg flex flex-col lg:flex-row  container rounded-md justify-between fixed z-10  bg-[#FFFFFF] px-4 sm:px-8 ">
       <div>
         <Link to="/" className="btn btn-ghost font-bold text-2xl">
           Book Vibe
