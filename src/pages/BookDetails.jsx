@@ -1,8 +1,6 @@
-// import { useEffect, useState } from "react";
-
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import { saveReadBook } from "../utility/localStorage";
 
 const BookDetails = () => {
@@ -17,16 +15,6 @@ const BookDetails = () => {
     saveReadBook(idInt);
     toast("Book Added To The List Successfully");
   };
-
-  // const [findBook, setfindBook] = useState("");
-
-  // useEffect(() => {
-  //   const findBook = book?.find(
-  //     (selectedBookDetails) => selectedBookDetails.book_id == book_id
-  //   );
-
-  //   setfindBook(findBook);
-  // }, [book_id, book]);
 
   return (
     <div className=" flex flex-col gap-6 lg:gap-0 lg:flex-row mt-6  ">
@@ -68,15 +56,6 @@ const BookDetails = () => {
         </div>
 
         <div className="gap-4 flex">
-          {/* <Link to={`/listedBooks/${book_id}`}>
-            <button
-              onClick={handleReadBook}
-              className="btn font-semibold text-xl border border-black"
-            >
-              Read
-            </button>
-          </Link> */}
-
           <button
             onClick={handleReadBook}
             className="btn font-semibold text-xl border border-black"

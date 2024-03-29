@@ -45,10 +45,10 @@ const ListedBooks = () => {
               <a>Rating</a>
             </li>
             <li>
-              <a>Category</a>
+              <a>Number of pages</a>
             </li>
             <li>
-              <a></a>
+              <a> Publisher year</a>
             </li>
           </ul>
         </div>
