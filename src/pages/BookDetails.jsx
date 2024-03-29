@@ -30,10 +30,10 @@ const BookDetails = () => {
 
   return (
     <div className=" flex flex-col gap-6 lg:gap-0 lg:flex-row mt-6  ">
-      <div className="w-1/2 mx-auto">
+      <div className="lg:w-1/3 mx-auto bg-base-200 rounded-2xl flex justify-center items-center">
         <img
           src={findBook.image}
-          className="rounded-2xl bg-base-200 h-2/3 p-12 "
+          className="rounded-2xl bg-base-200 object-cover h-2/3 p-12 "
         />
       </div>
 
@@ -52,9 +52,11 @@ const BookDetails = () => {
           <span className="font-extrabold">Tag </span>
           <div className="flex gap-5 text-sm font-semibold  text-[#23BE0A]">
             <p className="bg-[#23BE0A0D] rounded-2xl  px-3">
-              {/* {findBook.tags[0]} */}
+              {findBook?.tags[0]}
             </p>
-            <p className="bg-[#23BE0A0D] rounded-2xl px-3">{findBook.tags}</p>
+            <p className="bg-[#23BE0A0D] rounded-2xl px-3">
+              {findBook?.tags[1]}
+            </p>
           </div>
         </div>
         <hr />

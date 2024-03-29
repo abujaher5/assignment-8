@@ -5,6 +5,10 @@ import ListedBooks from "../pages/ListedBooks";
 import Book from "../pages/Book";
 import BookDetails from "../pages/BookDetails";
 import Chart from "../components/Chart";
+import SelectedBooks from "../components/SelectedBooks";
+import WishList from "../components/WishList";
+import Login from "../pages/Login";
+import AboutUs from "../pages/AboutUs";
 
 export const router = createBrowserRouter([
   {
@@ -14,20 +18,30 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("../../public/books.json"),
+        loader: () => fetch("/books.json"),
       },
       {
         path: "/book",
         element: <Book></Book>,
-        loader: () => fetch("../../public/books.json"),
+        loader: () => fetch("/books.json"),
 
         // loader: ({params}) =>
-        //   fetch(`../../public/books.json/${params.book_id}),
+        //   fetch(`/books.json/${params.book_id}),
       },
       {
         path: "/listedBooks",
         element: <ListedBooks></ListedBooks>,
-        loader: () => fetch("../../public/books.json"),
+        loader: () => fetch("/books.json"),
+        children: [
+          {
+            index: true,
+            element: <SelectedBooks></SelectedBooks>,
+          },
+          {
+            path: "wishlist",
+            element: <WishList></WishList>,
+          },
+        ],
       },
       {
         path: "/chart",
@@ -37,7 +51,15 @@ export const router = createBrowserRouter([
       {
         path: "/bookDetails/:book_id",
         element: <BookDetails></BookDetails>,
-        loader: () => fetch("../../public/books.json"),
+        loader: () => fetch("/books.json"),
+      },
+      {
+        path: "aboutUs",
+        element: <AboutUs></AboutUs>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
       },
     ],
   },

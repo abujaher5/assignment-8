@@ -42,6 +42,27 @@ const Navbar = () => {
           >
             Pages to Read
           </NavLink>
+
+          <NavLink
+            to="/aboutUs"
+            className={({ isActive }) =>
+              isActive
+                ? "text-[#23BE0A] border rounded-md p-2 border-[#23BE0A] font-bold"
+                : "text-black"
+            }
+          >
+            About Us
+          </NavLink>
+          <NavLink
+            to="/login"
+            className={({ isActive }) =>
+              isActive
+                ? "text-[#23BE0A] border rounded-md p-2 border-[#23BE0A] font-bold"
+                : "text-black"
+            }
+          >
+            Login
+          </NavLink>
         </ul>
       </div>
       <div className="items-center gap-2 lg:flex">
