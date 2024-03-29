@@ -1,5 +1,3 @@
-// import Navbar from "../components/Navbar";
-
 import { Link, useLoaderData } from "react-router-dom";
 import BookCard from "../components/BookCard";
 
@@ -31,29 +29,6 @@ const Home = () => {
       <h3 className="text-center font-bold text-3xl my-6">Books</h3>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:grid-cols-2">
-        {/* <div className="max-w-xs rounded-xl shadow-lg p-5 ">
-          <img
-            src="https://source.unsplash.com/random/300x300/?2"
-            alt=""
-            className=" object-center w-full rounded-xl h-60 bg-[#F3F3F3]"
-          />
-          <div className="flex flex-col justify-between p-6 space-y-8">
-            <div className="space-y-2  ">
-              <div className="flex gap-5 text-sm font-semibold  text-[#23BE0A]">
-                <p className="bg-[#23BE0A0D] rounded-2xl px-3">Young Adult</p>
-                <p className="bg-[#23BE0A0D] rounded-2xl px-3">Identity</p>
-              </div>
-              <h2 className="text-2xl font-bold ">{books[0].book_name}</h2>
-              <p>By :</p>
-            </div>
-            <hr />
-            <div className="flex justify-between">
-              <p>fiction</p>
-              <p>5.00 star</p>
-            </div>
-          </div>
-        </div> */}
-
         {books.map((book) => (
           <BookCard key={book.book_id} book={book}></BookCard>
         ))}

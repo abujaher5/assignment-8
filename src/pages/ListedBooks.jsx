@@ -1,8 +1,6 @@
 import { RiArrowDropDownLine } from "react-icons/ri";
-// import { CiLocationOn, CiMemoPad } from "react-icons/ci";
 
-// import { IoPeopleOutline } from "react-icons/io5";
-import { Link, Outlet, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getStoredReadBook } from "../utility/localStorage";
 import SelectedBooks from "../components/SelectedBooks";
@@ -22,11 +20,8 @@ const ListedBooks = () => {
           booksSelected.push(book);
         }
       }
-      // const booksSelected = books.filter((book) =>
-      //   storedBookIds.includes(book.book_id)
-      // );
+
       setSelectBooks(booksSelected);
-      // console.log(books, storedBookIds, booksSelected);
     }
   }, []);
 
@@ -53,7 +48,7 @@ const ListedBooks = () => {
               <a>Category</a>
             </li>
             <li>
-              <a>Famous</a>
+              <a></a>
             </li>
           </ul>
         </div>

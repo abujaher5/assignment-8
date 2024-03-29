@@ -1,23 +1,6 @@
-// import { useEffect, useState } from "react";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
-// import Chart from "../components/Chart";
-import { NavLink, useLoaderData } from "react-router-dom";
 
 const Book = () => {
-  // const books = useLoaderData();
-  // console.log(books);
-  // const { book_name, total_pages } = books;
-
-  // const [chart, setChart] = useState([]);
-  // useEffect(() => {
-  //   fetch("books.json")
-  //     .then((res) => res.json())
-  //     .then((data) => setChart(data));
-  // }, []);
-  // console.log(chart);
-  // const data = { book_name };
-  // console.log(data);
-
   const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
   const data = [
     {
@@ -93,9 +76,6 @@ const Book = () => {
           {data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={colors[index % 20]} />
           ))}
-          {/* {chart.map((char) => (
-            <Chart key={char.book_id} char={char}></Chart>
-          ))} */}
         </Bar>
       </BarChart>
     </div>
