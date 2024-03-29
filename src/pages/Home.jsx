@@ -1,6 +1,6 @@
 // import Navbar from "../components/Navbar";
 
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import BookCard from "../components/BookCard";
 
 const Home = () => {
@@ -28,9 +28,11 @@ const Home = () => {
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
-            <button className="btn text-white bg-[#23BE0A]">
-              View The List
-            </button>
+            <Link to="/listedBooks">
+              <button className="btn text-white bg-[#23BE0A]">
+                View The List
+              </button>
+            </Link>
           </div>
         </div>
       </div>

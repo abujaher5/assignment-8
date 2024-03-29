@@ -2,12 +2,29 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import { CiLocationOn, CiMemoPad } from "react-icons/ci";
 
 import { IoPeopleOutline } from "react-icons/io5";
+import { useLoaderData, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const ListedBooks = () => {
+  // const book = useLoaderData();
+
+  // let { book_id } = useParams();
+
+  // const [bookInfo, setBookInfo] = useState("");
+
+  // useEffect(() => {
+  //   const findOutBook = book?.find(
+  //     (selectBookDetails) => selectBookDetails.book_id == book_id
+  //   );
+
+  //   console.log(findOutBook);
+  //   setBookInfo(findOutBook);
+  // }, [book_id, book]);
+
   return (
     <div>
       <div className="text-center bg-[#1313130D] rounded-2xl h-24 mt-6 flex flex-col justify-center items-center font-bold text-2xl">
-        <h3>Books</h3>
+        {/* <h3>{bookInfo.book_name}</h3> */}
       </div>
       <div className=" text-center flex justify-center mt-6 items-center">
         <button className=" btn text-white bg-[#23BE0A]">
