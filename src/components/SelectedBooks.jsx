@@ -1,7 +1,6 @@
 import { CiLocationOn, CiMemoPad } from "react-icons/ci";
 
 import { IoPeopleOutline } from "react-icons/io5";
-import prop
 
 const SelectedBooks = ({ book }) => {
   const {

@@ -27,10 +27,7 @@ const ListedBooks = () => {
 
   return (
     <div>
-      <h3 className="text-center text-4xl">books:{selectBooks.length}</h3>
-      <div className="text-center bg-[#1313130D] rounded-2xl h-24 mt-6 flex flex-col justify-center items-center font-bold text-2xl">
-        {/* <h3>{bookInfo.book_name}</h3> */}
-      </div>
+      <div className="text-center bg-[#1313130D] rounded-2xl h-24 mt-6 flex flex-col justify-center items-center font-bold text-2xl"></div>
       <div className=" text-center flex justify-center mt-6 items-center">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn m-1 bg-[#23BE0A]">
