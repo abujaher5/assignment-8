@@ -18,39 +18,40 @@ const Book = () => {
   // const data = { book_name };
   // console.log(data);
 
-  const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red"];
+  const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
   const data = [
     {
-      name: "Page A",
-      uv: 4000,
-      pv: 2400,
-      amt: 2400,
+      id: 1,
+      name: "Kill a Mockingbird",
+      total_pages: 281,
     },
     {
-      name: "Page B",
-      uv: 3000,
-      pv: 1398,
-      amt: 2210,
+      id: 2,
+      name: "1984",
+      total_pages: 328,
     },
     {
-      name: "Page C",
-      uv: 2000,
-      pv: 9800,
-      amt: 2290,
+      id: 3,
+      name: "Great Gatsby",
+      total_pages: 180,
     },
     {
-      name: "Page D",
-      uv: 2780,
-      pv: 3908,
-      amt: 2000,
+      id: 4,
+      name: "Pride Prejudice",
+      total_pages: 279,
     },
     {
-      name: "Page E",
-      uv: 1890,
-      pv: 4800,
-      amt: 2181,
+      id: 5,
+      name: "The Catcher Rye",
+      total_pages: 224,
+    },
+    {
+      id: 6,
+      name: "The Sorcerer's Stone",
+      total_pages: 320,
     },
   ];
+
   const getPath = (x, y, width, height) => {
     return `M${x},${y + height}C${x + width / 3},${y + height} ${
       x + width / 2
@@ -70,7 +71,7 @@ const Book = () => {
   return (
     <div className="mt-10  flex justify-center items-center">
       <BarChart
-        width={800}
+        width={1000}
         height={400}
         data={data}
         margin={{
@@ -84,7 +85,7 @@ const Book = () => {
         <XAxis dataKey="name" />
         <YAxis />
         <Bar
-          dataKey="uv"
+          dataKey="total_pages"
           fill="#8884d8"
           shape={<TriangleBar />}
           label={{ position: "top" }}
@@ -97,8 +98,6 @@ const Book = () => {
           ))} */}
         </Bar>
       </BarChart>
-
-      <NavLink to="/chart">button</NavLink>
     </div>
   );
 };
